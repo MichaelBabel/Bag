@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Mochila mochila = new Mochila();
 
+        // Diferentes tipos de subclasses sendo iniciados com a superclasse
         Item chave1 = new Chave();
         chave1.peso = 15;
         Item chave2 = new Chave();
@@ -13,8 +14,10 @@ public class Main {
         balestra1.peso = 48;
         Item raro1 = new Raro();
         raro1.peso = 5;
+        Item moeda1 = new Moeda();
+        moeda1.peso = 1;
 
-        Item[] itensAchados = {chave1, chave2, balestra1, raro1};
+        Item[] itensAchados = {chave1, chave2, balestra1, raro1, moeda1};
 
         for(int i = 0; i < itensAchados.length; i++) {
             if (mochila.cabeNaMochila(itensAchados[i])) {
